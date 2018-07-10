@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Simulation {
 
@@ -33,7 +32,7 @@ public class Simulation {
                 }
             }
             int maleNumber = maleRabbitList.size();
-            for (int i = 0; i < maleCount; i++) {
+            for (int i = 0; i < maleNumber; i++) {
                 maleRabbitList.get(i).agePlusOne();
                 if (maleRabbitList.get(i).getMonthsOld() >= 96) {
                     maleRabbitList.remove(i);

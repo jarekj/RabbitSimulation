@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Rabbit {
 
@@ -11,10 +10,6 @@ public class Rabbit {
 
     public int getMonthsOld() {
         return monthsOld;
-    }
-
-    public void setMonthsOld(int monthsOld) {
-        this.monthsOld = monthsOld;
     }
 
     public void agePlusOne(){
