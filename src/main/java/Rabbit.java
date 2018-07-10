@@ -16,4 +16,8 @@ public class Rabbit {
     public void setMonthsOld(int monthsOld) {
         this.monthsOld = monthsOld;
     }
+
+    public void agePlusOne(){
+        monthsOld++;
+    }
 }

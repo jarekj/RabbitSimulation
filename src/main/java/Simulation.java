@@ -15,27 +15,27 @@ public class Simulation {
         for (int i = 0; i < maleCount; i++) {
             maleRabbitList.add(new Rabbit());
         }
-        for (int i = 0; i <femaleCount; i++) {
+        for (int i = 0; i < femaleCount; i++) {
             femaleRabbitList.add(new Rabbit());
         }
 
         int months = 0;
 
-        while(femaleRabbitList.size() + maleRabbitList.size() <= limit) {
+        while (femaleRabbitList.size() + maleRabbitList.size() <= limit) {
             int femaleNumber = femaleRabbitList.size();
             for (int i = 0; i < femaleNumber; i++) {
-                femaleRabbitList.get(i).setMonthsOld(femaleRabbitList.get(i).getMonthsOld()+1);
-                if(femaleRabbitList.get(i).getMonthsOld() >= 4){
+                femaleRabbitList.get(i).agePlusOne();
+                if (femaleRabbitList.get(i).getMonthsOld() >= 4) {
                     newPopulation();
                 }
-                if(femaleRabbitList.get(i).getMonthsOld() == 96){
+                if (femaleRabbitList.get(i).getMonthsOld() >= 96) {
                     femaleRabbitList.remove(i);
                 }
             }
             int maleNumber = maleRabbitList.size();
             for (int i = 0; i < maleCount; i++) {
-                maleRabbitList.get(i).setMonthsOld(maleRabbitList.get(i).getMonthsOld()+1);
-                if(maleRabbitList.get(i).getMonthsOld() == 96){
+                maleRabbitList.get(i).agePlusOne();
+                if (maleRabbitList.get(i).getMonthsOld() >= 96) {
                     maleRabbitList.remove(i);
                 }
             }
@@ -45,7 +45,7 @@ public class Simulation {
         return months;
     }
 
-    public void newPopulation(){
+    public void newPopulation() {
         for (int i = 0; i < 5; i++) {
             maleRabbitList.add(new Rabbit());
         }
