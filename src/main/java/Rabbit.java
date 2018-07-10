@@ -1,12 +1,19 @@
+import java.util.ArrayList;
+
 public class Rabbit {
 
     int monthsOld;
-    boolean male;
 
 
+    public Rabbit() {
+        this.monthsOld = 0;
+    }
 
+    public int getMonthsOld() {
+        return monthsOld;
+    }
 
-    static int simulate(int maleCount, int femaleCount, long limit){
-
+    public void setMonthsOld(int monthsOld) {
+        this.monthsOld = monthsOld;
     }
 }
