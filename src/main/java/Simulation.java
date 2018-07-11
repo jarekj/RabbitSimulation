@@ -23,10 +23,10 @@ public class Simulation {
         while (femaleRabbitList.size() + maleRabbitList.size() <= limit) {
             int femaleNumber = femaleRabbitList.size();
             for (int i = 0; i < femaleNumber; i++) {
-                femaleRabbitList.get(i).agePlusOne();
                 if (femaleRabbitList.get(i).getMonthsOld() >= 4) {
                     newPopulation();
                 }
+                femaleRabbitList.get(i).agePlusOne();
                 if (femaleRabbitList.get(i).getMonthsOld() >= 96) {
                     femaleRabbitList.remove(i);
                 }
